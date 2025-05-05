@@ -1,0 +1,7 @@
+dotenv==0.9.9
+optuna==4.3.0
+giskard==2.16.2
+minio==7.2.15
+clickhouse-connect==0.8.17
+clickhouse-driver==0.2.9
+catboost==1.2.7
