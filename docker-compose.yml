@@ -30,8 +30,8 @@ services:
     volumes:
       - ./fastapi:/fastapi/src
     environment:
-      - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
-      - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
+      - MINIO_ACCESS_KEY=${MINIO_ROOT_USER}
+      - MINIO_SECRET_KEY=${MINIO_ROOT_PASSWORD}
     healthcheck:
       test: curl --fail http://localhost:8000/health || exit 1
       interval: 10s
@@ -44,34 +44,62 @@ services:
     networks:
       - cp-network
 
-  notebook:
-      platform: linux/amd64
-      build: 
-        context: .
-        dockerfile: docker/notebook/Dockerfile
-      image: cp-notebook:latest
-      container_name: cp-notebook
-      command: start-notebook.sh --NotebookApp.token=''
-      volumes:
-       - ./notebook/:/notebook/
-      environment:
-        - SPARK_COMPAT_VERSION=${SPARK_COMPAT_VERSION}
-        - SCALA_COMPAT_VERSION=${SCALA_COMPAT_VERSION}
-        - CATBOOST_SPARK_VERSION=${CATBOOST_SPARK_VERSION}
-        - CLICKHOUSE_HOST=${CLICKHOUSE_HOST}
-        - CLICKHOUSE_PORT=${CLICKHOUSE_PORT}
-        - CLICKHOUSE_USER=${CLICKHOUSE_USER}
-        - CLICKHOUSE_PASSWORD=${CLICKHOUSE_PASSWORD}
-        - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
-        - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
-      ports:
-        - 8888:8888
+  mlflow:
+    platform: linux/amd64
+    restart: always
+    build: 
+      context: .
+      dockerfile: docker/mlflow/Dockerfile
+    image: cp-mlflow:latest
+    container_name: cp-mlflow
+    depends_on:
+      s3:
+        condition: service_healthy
+        restart: true
+      mlflow_db:
+        condition: service_healthy
+        restart: true
+    ports:
+        - 5000:5000
+    environment:
+        - MLFLOW_S3_ENDPOINT_URL=http://s3:9099
+        - AWS_ACCESS_KEY_ID=${MINIO_ROOT_USER}
+        - AWS_SECRET_ACCESS_KEY=${MINIO_ROOT_PASSWORD}
+        - MLFLOW_TRACKING_USERNAME=${MLFLOW_TRACKING_USERNAME}
+        - MLFLOW_TRACKING_PASSWORD=${MLFLOW_TRACKING_PASSWORD}
+    # command: mlflow server --backend-store-uri mysql+pymysql://${MYSQL_USER}:${MYSQL_PASSWORD}@db:3306/${MYSQL_DATABASE} --default-artifact-root s3://mlflow/ --host 0.0.0.0
+    command: mlflow server --backend-store-uri postgresql://${DB_USER}:${DB_PASSWORD}@${MLFLOW_DB_HOST}:${DB_PORT}/${MLFLOW_DB_NAME} --default-artifact-root s3://mlflow --serve-artifacts --host 0.0.0.0
+    networks:
+        - cp-network
+
+  # notebook:
+  #     platform: linux/amd64
+  #     build: 
+  #       context: .
+  #       dockerfile: docker/notebook/Dockerfile
+  #     image: cp-notebook:latest
+  #     container_name: cp-notebook
+  #     command: start-notebook.sh --NotebookApp.token=''
+  #     volumes:
+  #      - ./notebook/:/notebook/
+  #     environment:
+  #       - SPARK_COMPAT_VERSION=${SPARK_COMPAT_VERSION}
+  #       - SCALA_COMPAT_VERSION=${SCALA_COMPAT_VERSION}
+  #       - CATBOOST_SPARK_VERSION=${CATBOOST_SPARK_VERSION}
+  #       - CLICKHOUSE_HOST=${CLICKHOUSE_HOST}
+  #       - CLICKHOUSE_PORT=${CLICKHOUSE_PORT}
+  #       - CLICKHOUSE_USER=${CLICKHOUSE_USER}
+  #       - CLICKHOUSE_PASSWORD=${CLICKHOUSE_PASSWORD}
+  #       - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
+  #       - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
+  #     ports:
+        # - 8888:8888
       # depends_on:
       #   fastapi:
       #     condition: service_healthy
       #     restart: true
-      networks:
-        - cp-network
+      # networks:
+      #   - cp-network
 
   s3:
     image: minio/minio:latest
@@ -124,6 +152,33 @@ services:
       interval: 10s
       timeout: 10s
       retries: 3
+    networks:
+      - cp-network
+
+  mlflow_db:
+    image: postgres:13
+    platform: linux/amd64
+    container_name: cp-postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=${MLFLOW_DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_HOST=${DB_HOST}
+      - POSTGRES_PORT=${DB_PORT}
+    volumes:
+      - ./postgres/pg-data:/var/lib/postgresql/data
+    cap_add:
+      - SYS_NICE
+      - NET_ADMIN
+      - IPC_LOCK
+      - SYS_PTRACE
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     networks:
       - cp-network
 

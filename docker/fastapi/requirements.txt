@@ -1,7 +1,7 @@
 pandas==2.1.4
 fastapi[standard]
-pydantic-settings==2.8.1
+# pydantic-settings==2.8.1
 pydantic
-scikit-learn==1.4.1.post1
+scikit-learn==1.6.1
 catboost==1.2.7
 minio==7.2.15
