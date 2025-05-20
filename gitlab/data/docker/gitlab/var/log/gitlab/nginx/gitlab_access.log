@@ -1,0 +1,17 @@
+172.18.0.1 - - [19/May/2025:04:43:20 +0000] "GET / HTTP/1.1" 302 0 "" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0" -
+172.18.0.1 - - [19/May/2025:04:43:20 +0000] "GET /users/sign_in HTTP/1.1" 200 5410 "" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0" 2.49
+172.18.0.1 - - [19/May/2025:04:43:30 +0000] "POST /users/sign_in HTTP/1.1" 200 5619 "http://localhost:8000/users/sign_in" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0" 2.54
+127.0.0.1 - - [19/May/2025:04:43:37 +0000] "GET /help HTTP/1.1" 200 29220 "" "curl/8.13.0-DEV" -
+172.18.0.1 - - [19/May/2025:04:43:47 +0000] "POST /users/sign_in HTTP/1.1" 200 5615 "http://localhost:8000/users/sign_in" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0" 2.54
+127.0.0.1 - - [19/May/2025:04:44:38 +0000] "GET /help HTTP/1.1" 200 29220 "" "curl/8.13.0-DEV" -
+127.0.0.1 - - [19/May/2025:04:45:39 +0000] "GET /help HTTP/1.1" 200 29220 "" "curl/8.13.0-DEV" -
+127.0.0.1 - - [19/May/2025:04:46:40 +0000] "GET /help HTTP/1.1" 200 29220 "" "curl/8.13.0-DEV" -
+127.0.0.1 - - [19/May/2025:04:47:41 +0000] "GET /help HTTP/1.1" 200 29220 "" "curl/8.13.0-DEV" -
+127.0.0.1 - - [19/May/2025:04:48:41 +0000] "GET /help HTTP/1.1" 200 29220 "" "curl/8.13.0-DEV" -
+127.0.0.1 - - [19/May/2025:04:49:41 +0000] "GET /help HTTP/1.1" 200 29220 "" "curl/8.13.0-DEV" -
+127.0.0.1 - - [19/May/2025:04:50:42 +0000] "GET /help HTTP/1.1" 200 29220 "" "curl/8.13.0-DEV" -
+172.18.0.1 - - [19/May/2025:04:50:48 +0000] "POST /users/sign_in HTTP/1.1" 200 5611 "http://localhost:8000/users/sign_in" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0" 2.55
+172.18.0.1 - - [19/May/2025:04:50:48 +0000] "GET /assets/gitlab-mono/GitLabMono-08d2c5e8ff8fd3d2d6ec55bc7713380f8981c35f9d2df14e12b835464d6e8f23.woff2 HTTP/1.1" 200 0 "http://localhost:8000/users/sign_in" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0" -
+172.18.0.1 - - [19/May/2025:04:50:48 +0000] "GET /assets/icons-ca86b3ebff8cbe14f7728864eabad153d00b66986018226fe439015884de11c2.svg HTTP/1.1" 200 47164 "http://localhost:8000/users/sign_in" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0" -
+127.0.0.1 - - [19/May/2025:04:51:42 +0000] "GET /help HTTP/1.1" 200 29220 "" "curl/8.13.0-DEV" -
+127.0.0.1 - - [19/May/2025:04:52:43 +0000] "GET /help HTTP/1.1" 200 29220 "" "curl/8.13.0-DEV" -

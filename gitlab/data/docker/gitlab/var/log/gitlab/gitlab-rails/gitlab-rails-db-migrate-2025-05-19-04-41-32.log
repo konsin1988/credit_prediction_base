@@ -1,0 +1,48 @@
+Running db:schema:load rake task
+psql:/opt/gitlab/embedded/service/gitlab-rails/db/structure.sql:9: NOTICE:  extension "btree_gist" already exists, skipping
+psql:/opt/gitlab/embedded/service/gitlab-rails/db/structure.sql:11: NOTICE:  extension "pg_trgm" already exists, skipping
+
+== Seed from /opt/gitlab/embedded/service/gitlab-rails/db/fixtures/production/001_application_settings.rb
+Creating the default ApplicationSetting record.
+== /opt/gitlab/embedded/service/gitlab-rails/db/fixtures/production/001_application_settings.rb took 2.91 seconds
+
+== Seed from /opt/gitlab/embedded/service/gitlab-rails/db/fixtures/production/002_default_organization.rb
+
+OK
+== /opt/gitlab/embedded/service/gitlab-rails/db/fixtures/production/002_default_organization.rb took 0.07 seconds
+
+== Seed from /opt/gitlab/embedded/service/gitlab-rails/db/fixtures/production/003_admin.rb
+Administrator account created:
+
+login:    root
+password: ******
+
+== /opt/gitlab/embedded/service/gitlab-rails/db/fixtures/production/003_admin.rb took 1.29 seconds
+
+== Seed from /opt/gitlab/embedded/service/gitlab-rails/db/fixtures/production/004_create_base_work_item_types.rb
+
+OK
+== /opt/gitlab/embedded/service/gitlab-rails/db/fixtures/production/004_create_base_work_item_types.rb took 0.02 seconds
+
+== Seed from /opt/gitlab/embedded/service/gitlab-rails/db/fixtures/production/005_add_security_training_providers.rb
+
+OK
+== /opt/gitlab/embedded/service/gitlab-rails/db/fixtures/production/005_add_security_training_providers.rb took 0.01 seconds
+
+== Seed from /opt/gitlab/embedded/service/gitlab-rails/db/fixtures/production/010_settings.rb
+Saved CI JWT signing key
+Saved CI Job Token signing key
+== /opt/gitlab/embedded/service/gitlab-rails/db/fixtures/production/010_settings.rb took 0.24 seconds
+
+== Seed from /opt/gitlab/embedded/service/gitlab-rails/db/fixtures/production/020_create_work_item_hierarchy_restrictions.rb
+
+OK
+== /opt/gitlab/embedded/service/gitlab-rails/db/fixtures/production/020_create_work_item_hierarchy_restrictions.rb took 0.02 seconds
+
+== Seed from /opt/gitlab/embedded/service/gitlab-rails/db/fixtures/production/040_create_work_item_related_link_restrictions.rb
+
+OK
+== /opt/gitlab/embedded/service/gitlab-rails/db/fixtures/production/040_create_work_item_related_link_restrictions.rb took 0.01 seconds
+== Seeding took 4.57 seconds
+Running gitlab:clickhouse:migrate:main rake task
+The 'main' ClickHouse database is not configured, skipping migrations

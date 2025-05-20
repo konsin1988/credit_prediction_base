@@ -1,0 +1,81 @@
+{"level":"info","msg":"Wrapper started","pid":520,"time":"2025-05-19T04:41:14.247Z","wrapper":520}
+{"level":"info","msg":"finding process","pid":520,"pid_file":"/var/opt/gitlab/gitaly/gitaly.pid","time":"2025-05-19T04:41:14.247Z","wrapper":520}
+{"error":"open /var/opt/gitlab/gitaly/gitaly.pid: no such file or directory","level":"error","msg":"find process","pid":520,"time":"2025-05-19T04:41:14.247Z","wrapper":520}
+{"level":"info","msg":"spawning a process","pid":520,"time":"2025-05-19T04:41:14.247Z","wrapper":520}
+{"level":"info","msg":"monitoring process","pid":520,"process":527,"time":"2025-05-19T04:41:14.247Z","wrapper":520}
+{"level":"warning","msg":"The current configurations will cause Gitaly to fail to start up in future versions. Please run 'gitaly configuration validate \u003c /var/opt/gitlab/gitaly/config.toml' and fix the errors that are printed.","pid":527,"time":"2025-05-19T04:41:14.577Z"}
+{"level":"info","msg":"maxprocs: Leaving GOMAXPROCS=12: CPU quota undefined","pid":527,"time":"2025-05-19T04:41:14.578Z"}
+{"latencies":[0.001,0.005,0.025,0.1,0.5,1,10,30,60,300,1500],"level":"info","msg":"grpc prometheus histograms enabled","pid":527,"time":"2025-05-19T04:41:14.578Z"}
+{"level":"info","msg":"Starting Gitaly","pid":527,"time":"2025-05-19T04:41:14.578Z","version":"18.0.0"}
+{"duration_ms":0,"level":"info","msg":"finished initializing cgroups","pid":527,"time":"2025-05-19T04:41:14.579Z"}
+{"duration_ms":68,"level":"info","msg":"finished unpacking auxiliary binaries","pid":527,"time":"2025-05-19T04:41:14.647Z"}
+{"duration_ms":0,"level":"info","msg":"finished initializing bootstrap","pid":527,"time":"2025-05-19T04:41:14.647Z"}
+{"duration_ms":0,"level":"info","msg":"finished initializing command factory","pid":527,"time":"2025-05-19T04:41:14.648Z"}
+{"binary_path":"/var/opt/gitlab/gitaly/run/gitaly-527/git-exec-1102038569.d/git","level":"info","msg":"using Git binary","pid":527,"time":"2025-05-19T04:41:14.648Z"}
+{"duration_ms":4,"level":"info","msg":"finished detecting git version","pid":527,"time":"2025-05-19T04:41:14.652Z"}
+{"level":"info","msg":"using Git version","pid":527,"time":"2025-05-19T04:41:14.653Z","version":"2.49.0.gl2"}
+{"level":"info","msg":"clearing disk cache object folder","pid":527,"storage":"default","time":"2025-05-19T04:41:14.653Z"}
+{"cache_directory":"/var/opt/gitlab/git-data/repositories/+gitaly/tmp/diskcache949103375","level":"info","msg":"moving disk cache object folder","pid":527,"storage":"default","time":"2025-05-19T04:41:14.653Z"}
+{"cache_directory":"/var/opt/gitlab/git-data/repositories/+gitaly/tmp/diskcache949103375","level":"info","msg":"disk cache object folder doesn't exist, no need to remove","pid":527,"storage":"default","time":"2025-05-19T04:41:14.653Z"}
+{"disk_cache_path":"/var/opt/gitlab/git-data/repositories/+gitaly/cache","level":"info","msg":"Starting file walker","path":"/var/opt/gitlab/git-data/repositories/+gitaly/cache","pid":527,"time":"2025-05-19T04:41:14.653Z"}
+{"disk_cache_path":"/var/opt/gitlab/git-data/repositories/+gitaly/state","level":"info","msg":"Starting file walker","path":"/var/opt/gitlab/git-data/repositories/+gitaly/state","pid":527,"time":"2025-05-19T04:41:14.653Z"}
+{"cache_directory":"/var/opt/gitlab/git-data/repositories/+gitaly/tmp/diskcache949103375","clear_duration_ms":0,"level":"info","msg":"cleared all cache object files","pid":527,"storage":"default","time":"2025-05-19T04:41:14.653Z"}
+{"error":"operation not supported","level":"warning","msg":"Unable to set SO_REUSEPORT: zero downtime upgrades will not work","pid":527,"time":"2025-05-19T04:41:14.664Z"}
+{"level":"info","msg":"counting repositories","pid":527,"time":"2025-05-19T04:41:14.664Z"}
+{"level":"info","msg":"finished tempdir cleaner walk","pid":527,"storage":"default","time":"2025-05-19T04:41:14.664Z","time_ms":0}
+{"level":"info","msg":"starting to count repositories","pid":527,"storage_path":"/var/opt/gitlab/git-data/repositories","time":"2025-05-19T04:41:14.664Z"}
+{"address":"/var/opt/gitlab/gitaly/gitaly.socket","level":"info","msg":"listening at address","pid":527,"schema":"unix","time":"2025-05-19T04:41:14.664Z"}
+{"counting_duration_ms":0,"level":"info","msg":"completed counting repositories","pid":527,"storage_path":"/var/opt/gitlab/git-data/repositories","time":"2025-05-19T04:41:14.664Z"}
+{"counting_duration":0,"level":"info","msg":"completed counting all repositories","pid":527,"time":"2025-05-19T04:41:14.664Z"}
+{"address":"/var/opt/gitlab/gitaly/run/gitaly-527/sock.d/intern","level":"info","msg":"listening at address","pid":527,"schema":"unix","time":"2025-05-19T04:41:14.664Z"}
+{"address":"localhost:9236","level":"info","msg":"starting prometheus listener","pid":527,"time":"2025-05-19T04:41:14.665Z"}
+{"duration_ms":86,"level":"info","msg":"Started Gitaly","pid":527,"time":"2025-05-19T04:41:14.665Z"}
+{"level":"info","msg":"maintenance: daily scheduled","pid":527,"scheduled":"2025-05-19T12:00:00Z","time":"2025-05-19T04:41:14.665Z"}
+{"duration_ms":3825,"level":"info","msg":"License database preloaded","pid":527,"time":"2025-05-19T04:41:18.404Z"}
+{"level":"warning","msg":"forwarding signal","pid":520,"process":527,"signal":1,"time":"2025-05-19T04:43:53.485Z","wrapper":520}
+{"level":"warning","msg":"The current configurations will cause Gitaly to fail to start up in future versions. Please run 'gitaly configuration validate \u003c /var/opt/gitlab/gitaly/config.toml' and fix the errors that are printed.","pid":3206,"time":"2025-05-19T04:43:53.636Z"}
+{"level":"info","msg":"maxprocs: Leaving GOMAXPROCS=12: CPU quota undefined","pid":3206,"time":"2025-05-19T04:43:53.636Z"}
+{"latencies":[0.001,0.005,0.025,0.1,0.5,1,10,30,60,300,1500],"level":"info","msg":"grpc prometheus histograms enabled","pid":3206,"time":"2025-05-19T04:43:53.636Z"}
+{"level":"info","msg":"Starting Gitaly","pid":3206,"time":"2025-05-19T04:43:53.636Z","version":"18.0.0"}
+{"duration_ms":0,"level":"info","msg":"finished initializing cgroups","pid":3206,"time":"2025-05-19T04:43:53.655Z"}
+{"duration_ms":37,"level":"info","msg":"finished unpacking auxiliary binaries","pid":3206,"time":"2025-05-19T04:43:53.693Z"}
+{"duration_ms":0,"level":"info","msg":"finished initializing bootstrap","pid":3206,"time":"2025-05-19T04:43:53.693Z"}
+{"duration_ms":0,"level":"info","msg":"finished initializing command factory","pid":3206,"time":"2025-05-19T04:43:53.693Z"}
+{"binary_path":"/var/opt/gitlab/gitaly/run/gitaly-3206/git-exec-3068982232.d/git","level":"info","msg":"using Git binary","pid":3206,"time":"2025-05-19T04:43:53.694Z"}
+{"duration_ms":2,"level":"info","msg":"finished detecting git version","pid":3206,"time":"2025-05-19T04:43:53.696Z"}
+{"level":"info","msg":"using Git version","pid":3206,"time":"2025-05-19T04:43:53.696Z","version":"2.49.0.gl2"}
+{"level":"info","msg":"clearing disk cache object folder","pid":3206,"storage":"default","time":"2025-05-19T04:43:53.696Z"}
+{"cache_directory":"/var/opt/gitlab/git-data/repositories/+gitaly/tmp/diskcache2872930202","level":"info","msg":"moving disk cache object folder","pid":3206,"storage":"default","time":"2025-05-19T04:43:53.697Z"}
+{"cache_directory":"/var/opt/gitlab/git-data/repositories/+gitaly/tmp/diskcache2872930202","level":"info","msg":"disk cache object folder doesn't exist, no need to remove","pid":3206,"storage":"default","time":"2025-05-19T04:43:53.697Z"}
+{"disk_cache_path":"/var/opt/gitlab/git-data/repositories/+gitaly/cache","level":"info","msg":"Starting file walker","path":"/var/opt/gitlab/git-data/repositories/+gitaly/cache","pid":3206,"time":"2025-05-19T04:43:53.697Z"}
+{"disk_cache_path":"/var/opt/gitlab/git-data/repositories/+gitaly/state","level":"info","msg":"Starting file walker","path":"/var/opt/gitlab/git-data/repositories/+gitaly/state","pid":3206,"time":"2025-05-19T04:43:53.697Z"}
+{"cache_directory":"/var/opt/gitlab/git-data/repositories/+gitaly/tmp/diskcache2872930202","clear_duration_ms":0,"level":"info","msg":"cleared all cache object files","pid":3206,"storage":"default","time":"2025-05-19T04:43:53.697Z"}
+{"address":"/var/opt/gitlab/gitaly/gitaly.socket","level":"info","msg":"listening at address","pid":3206,"schema":"unix","time":"2025-05-19T04:43:53.701Z"}
+{"level":"info","msg":"counting repositories","pid":3206,"time":"2025-05-19T04:43:53.701Z"}
+{"level":"info","msg":"starting to count repositories","pid":3206,"storage_path":"/var/opt/gitlab/git-data/repositories","time":"2025-05-19T04:43:53.701Z"}
+{"address":"/var/opt/gitlab/gitaly/run/gitaly-3206/sock.d/intern","level":"info","msg":"listening at address","pid":3206,"schema":"unix","time":"2025-05-19T04:43:53.701Z"}
+{"level":"info","msg":"finished tempdir cleaner walk","pid":3206,"storage":"default","time":"2025-05-19T04:43:53.701Z","time_ms":0}
+{"address":"localhost:9236","level":"info","msg":"starting prometheus listener","pid":3206,"time":"2025-05-19T04:43:53.702Z"}
+{"duration_ms":65,"level":"info","msg":"Started Gitaly","pid":3206,"time":"2025-05-19T04:43:53.702Z"}
+{"level":"info","msg":"maintenance: daily scheduled","pid":3206,"scheduled":"2025-05-19T12:00:00Z","time":"2025-05-19T04:43:53.702Z"}
+{"counting_duration_ms":0,"level":"info","msg":"completed counting repositories","pid":3206,"storage_path":"/var/opt/gitlab/git-data/repositories","time":"2025-05-19T04:43:53.702Z"}
+{"counting_duration":0,"level":"info","msg":"completed counting all repositories","pid":3206,"time":"2025-05-19T04:43:53.702Z"}
+{"level":"info","msg":"[graceful upgrade] stopping old Gitaly","pid":527,"time":"2025-05-19T04:43:53.702Z"}
+{"level":"warning","msg":"starting grace period","pid":527,"time":"2025-05-19T04:43:53.702Z"}
+{"level":"info","msg":"Upgrade succeeded","pid":527,"time":"2025-05-19T04:43:53.702Z"}
+{"level":"info","msg":"[graceful upgrade] stopped old Gitaly","pid":527,"time":"2025-05-19T04:43:53.703Z"}
+{"level":"info","msg":"Gitaly shutdown","pid":527,"time":"2025-05-19T04:43:53.727Z"}
+{"level":"warning","msg":"forwarding signal","pid":520,"process":527,"signal":17,"time":"2025-05-19T04:43:53.745Z","wrapper":520}
+{"error":"os: process already finished","level":"error","msg":"can't forward the signal","pid":520,"process":527,"signal":17,"time":"2025-05-19T04:43:53.746Z","wrapper":520}
+{"level":"error","msg":"wrapper for process shutting down","pid":520,"process":527,"time":"2025-05-19T04:43:54.286Z","wrapper":520}
+{"level":"info","msg":"Wrapper started","pid":3258,"time":"2025-05-19T04:43:54.320Z","wrapper":3258}
+{"level":"info","msg":"finding process","pid":3258,"pid_file":"/var/opt/gitlab/gitaly/gitaly.pid","time":"2025-05-19T04:43:54.320Z","wrapper":3258}
+{"level":"info","msg":"adopting a process","pid":3258,"time":"2025-05-19T04:43:54.328Z","wrapper":3258}
+{"level":"info","msg":"monitoring process","pid":3258,"process":3206,"time":"2025-05-19T04:43:54.328Z","wrapper":3258}
+{"duration_ms":2389,"level":"info","msg":"License database preloaded","pid":3206,"time":"2025-05-19T04:43:56.026Z"}
+{"level":"warning","msg":"forwarding signal","pid":3258,"process":3206,"signal":15,"time":"2025-05-19T04:53:09.605Z","wrapper":3258}
+{"level":"info","msg":"[shutdown] stopping Gitaly","pid":3206,"time":"2025-05-19T04:53:09.608Z"}
+{"level":"warning","msg":"starting grace period","pid":3206,"time":"2025-05-19T04:53:09.608Z"}
+{"level":"info","msg":"[shutdown] stopped Gitaly gracefully","pid":3206,"time":"2025-05-19T04:53:09.608Z"}
+{"level":"info","msg":"Gitaly shutdown","pid":3206,"time":"2025-05-19T04:53:09.654Z"}
+{"level":"error","msg":"wrapper for process shutting down","pid":3258,"process":3206,"time":"2025-05-19T04:53:10.538Z","wrapper":3258}

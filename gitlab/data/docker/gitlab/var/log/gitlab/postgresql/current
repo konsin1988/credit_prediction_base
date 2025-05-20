@@ -1,0 +1,90 @@
+2025-05-19_04:41:25.39286 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-05-19_04:41:25.39442 LOG:  listening on Unix socket "/var/opt/gitlab/postgresql/.s.PGSQL.5432"
+2025-05-19_04:41:25.39916 LOG:  database system was shut down at 2025-05-19 04:41:20 GMT
+2025-05-19_04:41:25.40732 LOG:  database system is ready to accept connections
+2025-05-19_04:41:28.70259 LOG:  no match in usermap "gitlab" for user "gitlab" authenticated as "root"
+2025-05-19_04:41:28.70272 FATAL:  Peer authentication failed for user "gitlab"
+2025-05-19_04:41:28.70273 DETAIL:  Connection matched file "/var/opt/gitlab/postgresql/data/pg_hba.conf" line 70: "local   all         all                               peer map=gitlab"
+2025-05-19_04:41:28.90493 LOG:  no match in usermap "gitlab" for user "gitlab" authenticated as "root"
+2025-05-19_04:41:28.90496 FATAL:  Peer authentication failed for user "gitlab"
+2025-05-19_04:41:28.90497 DETAIL:  Connection matched file "/var/opt/gitlab/postgresql/data/pg_hba.conf" line 70: "local   all         all                               peer map=gitlab"
+2025-05-19_04:41:29.10214 LOG:  no match in usermap "gitlab" for user "gitlab" authenticated as "root"
+2025-05-19_04:41:29.10217 FATAL:  Peer authentication failed for user "gitlab"
+2025-05-19_04:41:29.10217 DETAIL:  Connection matched file "/var/opt/gitlab/postgresql/data/pg_hba.conf" line 70: "local   all         all                               peer map=gitlab"
+2025-05-19_04:41:29.65758 LOG:  no match in usermap "gitlab" for user "gitlab" authenticated as "root"
+2025-05-19_04:41:29.65760 FATAL:  Peer authentication failed for user "gitlab"
+2025-05-19_04:41:29.65761 DETAIL:  Connection matched file "/var/opt/gitlab/postgresql/data/pg_hba.conf" line 70: "local   all         all                               peer map=gitlab"
+2025-05-19_04:41:29.90411 LOG:  no match in usermap "gitlab" for user "gitlab" authenticated as "root"
+2025-05-19_04:41:29.90413 FATAL:  Peer authentication failed for user "gitlab"
+2025-05-19_04:41:29.90414 DETAIL:  Connection matched file "/var/opt/gitlab/postgresql/data/pg_hba.conf" line 70: "local   all         all                               peer map=gitlab"
+2025-05-19_04:41:50.69881 ERROR:  relation "feature_gates" does not exist at character 523
+2025-05-19_04:41:50.69883 STATEMENT:  SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+2025-05-19_04:41:50.69883 	       pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+2025-05-19_04:41:50.69884 	       c.collname, col_description(a.attrelid, a.attnum) AS comment,
+2025-05-19_04:41:50.69884 	       attidentity AS identity,
+2025-05-19_04:41:50.69884 	       attgenerated as attgenerated
+2025-05-19_04:41:50.69884 	  FROM pg_attribute a
+2025-05-19_04:41:50.69885 	  LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+2025-05-19_04:41:50.69885 	  LEFT JOIN pg_type t ON a.atttypid = t.oid
+2025-05-19_04:41:50.69885 	  LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+2025-05-19_04:41:50.69886 	 WHERE a.attrelid = '"feature_gates"'::regclass
+2025-05-19_04:41:50.69886 	   AND a.attnum > 0 AND NOT a.attisdropped
+2025-05-19_04:41:50.69886 	 ORDER BY a.attnum
+2025-05-19_04:41:50.69886 	
+2025-05-19_04:53:13.04750 received TERM from runit, sending INT instead to force quit connections
+2025-05-19_04:53:13.05014 LOG:  received fast shutdown request
+2025-05-19_04:53:13.05208 LOG:  aborting any active transactions
+2025-05-19_04:53:13.05221 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.05224 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.05225 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.05226 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.05227 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.05228 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.05230 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.05232 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.05233 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.05607 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.05609 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.05609 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.05610 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.05610 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.05962 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.05979 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.05980 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.05980 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.05980 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.05981 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.05981 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.06022 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.06023 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.06024 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.06102 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.06104 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.06186 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.06188 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.06190 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.06209 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.06299 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.06305 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.06358 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.06391 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.06487 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.06490 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.06702 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.06704 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.06706 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.06729 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.06731 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.06782 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.07171 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.07175 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.07175 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.07176 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.07176 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.07177 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.07238 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.07269 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.07298 FATAL:  terminating connection due to administrator command
+2025-05-19_04:53:13.07765 LOG:  background worker "logical replication launcher" (PID 581) exited with exit code 1
+2025-05-19_04:53:13.08126 LOG:  shutting down
+2025-05-19_04:53:13.14186 LOG:  database system is shut down

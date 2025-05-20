@@ -1,0 +1,43 @@
+2025-05-19_04:41:08.19286 499:C 19 May 2025 04:41:08.192 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-05-19_04:41:08.19298 499:C 19 May 2025 04:41:08.192 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-05-19_04:41:08.19298 499:C 19 May 2025 04:41:08.192 * Redis version=7.2.7, bits=64, commit=ba181057, modified=0, pid=499, just started
+2025-05-19_04:41:08.19299 499:C 19 May 2025 04:41:08.192 * Configuration loaded
+2025-05-19_04:41:08.19331 499:M 19 May 2025 04:41:08.193 * monotonic clock: POSIX clock_gettime
+2025-05-19_04:41:08.19403 499:M 19 May 2025 04:41:08.193 # Failed to write PID file: Permission denied
+2025-05-19_04:41:08.19405                 _._                                                  
+2025-05-19_04:41:08.19405            _.-``__ ''-._                                             
+2025-05-19_04:41:08.19405       _.-``    `.  `_.  ''-._           Redis 7.2.7 (ba181057/0) 64 bit
+2025-05-19_04:41:08.19406   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-05-19_04:41:08.19406  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-05-19_04:41:08.19406  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-05-19_04:41:08.19407  |    `-._   `._    /     _.-'    |     PID: 499
+2025-05-19_04:41:08.19407   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-05-19_04:41:08.19407  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-05-19_04:41:08.19408  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-05-19_04:41:08.19408   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-05-19_04:41:08.19408  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-05-19_04:41:08.19408  |    `-._`-._        _.-'_.-'    |                                  
+2025-05-19_04:41:08.19409   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-05-19_04:41:08.19409       `-._    `-.__.-'    _.-'                                       
+2025-05-19_04:41:08.19410           `-._        _.-'                                           
+2025-05-19_04:41:08.19411               `-.__.-'                                               
+2025-05-19_04:41:08.19411 
+2025-05-19_04:41:08.19477 499:M 19 May 2025 04:41:08.194 * Server initialized
+2025-05-19_04:41:08.19478 499:M 19 May 2025 04:41:08.194 * Ready to accept connections unix
+2025-05-19_04:46:09.05705 499:M 19 May 2025 04:46:09.056 * 10 changes in 300 seconds. Saving...
+2025-05-19_04:46:09.05841 499:M 19 May 2025 04:46:09.058 * Background saving started by pid 5155
+2025-05-19_04:46:09.06714 5155:C 19 May 2025 04:46:09.067 * DB saved on disk
+2025-05-19_04:46:09.06799 5155:C 19 May 2025 04:46:09.067 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+2025-05-19_04:46:09.15898 499:M 19 May 2025 04:46:09.158 * Background saving terminated with success
+2025-05-19_04:51:10.04966 499:M 19 May 2025 04:51:10.049 * 10 changes in 300 seconds. Saving...
+2025-05-19_04:51:10.05064 499:M 19 May 2025 04:51:10.050 * Background saving started by pid 9088
+2025-05-19_04:51:10.08620 9088:C 19 May 2025 04:51:10.086 * DB saved on disk
+2025-05-19_04:51:10.08743 9088:C 19 May 2025 04:51:10.087 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+2025-05-19_04:51:10.15121 499:M 19 May 2025 04:51:10.151 * Background saving terminated with success
+2025-05-19_04:53:15.14336 499:signal-handler (1747630395) Received SIGTERM scheduling shutdown...
+2025-05-19_04:53:15.20280 499:M 19 May 2025 04:53:15.202 * User requested shutdown...
+2025-05-19_04:53:15.20285 499:M 19 May 2025 04:53:15.202 * Saving the final RDB snapshot before exiting.
+2025-05-19_04:53:15.21169 499:M 19 May 2025 04:53:15.211 * DB saved on disk
+2025-05-19_04:53:15.21178 499:M 19 May 2025 04:53:15.211 * Removing the pid file.
+2025-05-19_04:53:15.21180 499:M 19 May 2025 04:53:15.211 * Removing the unix socket file.
+2025-05-19_04:53:15.21181 499:M 19 May 2025 04:53:15.211 # Redis is now ready to exit, bye bye...

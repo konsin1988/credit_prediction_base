@@ -1,0 +1,18 @@
+services:
+  cp-learning:
+    image:
+      cp-learning
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cp-learning
+    networks:
+      - cp-network
+    volumes:
+      - .:/app
+
+networks:
+  cp-network:
+    name: cp-network
+    external: True
+      

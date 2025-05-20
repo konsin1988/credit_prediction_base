@@ -1,0 +1,1 @@
+chmod 777 /var/run/docker.sock - for get permission on /var/run/docker.sock
